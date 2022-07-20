@@ -24,6 +24,7 @@ export const RWebShare = ({
       title: data.title || "share",
       text: data.text || "",
       url: data.url || (typeof window !== "undefined" && window.location.href) || "",
+      files: data.files || [],
     }),
     [data]
   );
@@ -31,7 +32,7 @@ export const RWebShare = ({
   const handleOnClick = async () => {
     if (window.navigator.share) {
       try {
-        await window.navigator.share(shareData);
+        await window.navigator.share({ ...shareData });
         onClick();
       } catch (e) {
         console.warn(e);
@@ -60,6 +61,7 @@ export const RWebShare = ({
           </Backdrop>
         </Portal>
       )}
+      <input type="file"></input>
     </>
   );
 };

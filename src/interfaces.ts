@@ -2,6 +2,7 @@ export interface ShareData {
   text?: string;
   title?: string;
   url?: string;
+  files?: File[];
 }
 
 export interface RWebShareProps {
