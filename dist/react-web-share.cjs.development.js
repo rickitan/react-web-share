@@ -1181,9 +1181,7 @@ var RWebShare = function RWebShare(_ref) {
     data: shareData,
     closeText: closeText,
     onClick: onClick
-  }))), React__default.createElement("input", {
-    type: "file"
-  }));
+  }))));
 };
 
 exports.RWebShare = RWebShare;

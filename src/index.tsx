@@ -61,7 +61,6 @@ export const RWebShare = ({
           </Backdrop>
         </Portal>
       )}
-      <input type="file"></input>
     </>
   );
 };
